@@ -27,13 +27,9 @@
       } else {
         this.uri = process.env.VUE_APP_API_ENDPOINT;
       }
+      console.log(this.uri)
       this.axios
-        .get(`${this.uri}`,{
-   headers: {
-          // remove headers
-        }
-      })
-        .then((response) => {
+        .get(`${this.uri}`, { crossdomain: true }).then((response) => {
           this.data = response.data.attractions;
         })
         .catch((error) => {
