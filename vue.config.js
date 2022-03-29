@@ -1,11 +1,11 @@
 require("dotenv").config();
 module.exports = {
-  publicPath: process.env.VUE_APP_ENV === "production" ? "https://eddieliu58.github.io/vue3/" : "/",
+  publicPath: process.env.VUE_APP_ENV === "production" ? "/vue3/" : "/",
   devServer: {
     proxy: {
-      "/api": {
+      "/vue3/api": {
         target: "https://tour.klcg.gov.tw/data",
-        pathRewrite: { "^/api": "" },
+        pathRewrite: { "^/vue3/api": "" },
         ws: true,
         changeOrigin: true,
         secure: false,

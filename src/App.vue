@@ -28,7 +28,7 @@
         this.uri = process.env.VUE_APP_API_ENDPOINT;
       }
       this.axios
-        .get(this.uri)
+        .get(`${this.uri}`)
         .then((response) => {
           this.data = response.data.attractions;
         })
