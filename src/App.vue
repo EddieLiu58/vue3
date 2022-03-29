@@ -18,7 +18,6 @@
     data() {
       return {
         data: [],
-        corsURL:'https://cors-anywhere.herokuapp.com/',
         uri: "",
       };
     },
@@ -29,7 +28,11 @@
         this.uri = process.env.VUE_APP_API_ENDPOINT;
       }
       this.axios
-        .get(`${this.corsURL}${this.uri}`)
+        .get(`${this.uri}`,{
+   headers: {
+          // remove headers
+        }
+      })
         .then((response) => {
           this.data = response.data.attractions;
         })
