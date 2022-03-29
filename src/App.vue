@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import json from '../demo.json'
   export default {
     name: "App",
     components: {},
@@ -24,17 +25,16 @@
     mounted() {
       if (process.env.VUE_APP_ENV === "dev") {
         this.uri = process.env.VUE_APP_API_ENDPOINT_DEV;
-      } else {
-        this.uri = process.env.VUE_APP_API_ENDPOINT;
-      }
-      console.log(this.uri)
-      this.axios
+          this.axios
         .get(`${this.uri}`).then((response) => {
           this.data = response.data.attractions;
         })
         .catch((error) => {
           console.log(error);
         });
+      } else {
+        this.data = json.attractions;
+      }
     },
     methods: {},
   };
