@@ -3,9 +3,9 @@ module.exports = {
   publicPath: process.env.VUE_APP_ENV === "production" ? "/vue3/" : "/",
   devServer: {
     proxy: {
-      "/api": {
+      "/vue3": {
         target: "https://tour.klcg.gov.tw/data",
-        pathRewrite: { "^/api": "" },
+        pathRewrite: { "^/vue3": "" },
         changeOrigin: true,
         secure: false,
       },
