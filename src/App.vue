@@ -22,7 +22,7 @@
     },
     mounted() {
       this.axios
-        .get(`/attractions.json/`)
+        .get(`/vue3/attractions.json/`)
         .then((response) => {
           this.data = response.data.attractions;
         })
