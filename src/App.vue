@@ -22,7 +22,7 @@
     },
     mounted() {
       this.axios
-        .get(`/attractions.json/`)
+        .get(`https://tour.klcg.gov.tw/data/attractions.json/`)
         .then((response) => {
           this.data = response.data.attractions;
         })
