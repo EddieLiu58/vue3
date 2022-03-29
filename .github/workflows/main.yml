@@ -9,6 +9,12 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
+      - name: NPM Insall
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          run: npm install
+
       - name: NPM Run Build
         uses: actions/setup-node@v2
         with:
