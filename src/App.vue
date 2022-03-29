@@ -29,7 +29,7 @@
       }
       console.log(this.uri)
       this.axios
-        .get(`${this.uri}`, { crossdomain: true }).then((response) => {
+        .get(`${this.uri}`).then((response) => {
           this.data = response.data.attractions;
         })
         .catch((error) => {
