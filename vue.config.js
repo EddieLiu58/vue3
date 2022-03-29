@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: "https://eddieliu58.github.io/vue3",
+  publicPath: "/dist/",
   devServer: {
     proxy: "https://tour.klcg.gov.tw/data",
   },
