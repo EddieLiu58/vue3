@@ -18,17 +18,17 @@
     data() {
       return {
         data: [],
-        url: "",
+        uri: "",
       };
     },
     mounted() {
       if (process.env.VUE_APP_ENV === "dev") {
-        this.url = process.env.VUE_APP_API_ENDPOINT_DEV;
+        this.uri = process.env.VUE_APP_API_ENDPOINT_DEV;
       } else {
-        this.url = process.env.VUE_APP_API_ENDPOINT;
+        this.uri = process.env.VUE_APP_API_ENDPOINT;
       }
       this.axios
-        .get(this.url)
+        .get(this.uri)
         .then((response) => {
           this.data = response.data.attractions;
         })
