@@ -1,11 +1,5 @@
-module.exports = ({
+module.exports = {
   devServer: {
-    proxy: {
-      "^/api": {
-      target: url,
-      ws: true,
-      changeOrigin: true
-    }
- }
-},
-})
+    proxy: "https://tour.klcg.gov.tw/data",
+  },
+};
