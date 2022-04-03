@@ -1,9 +1,18 @@
 <template>
   <v-app>
     <v-main>
-      <div v-for="item in data" :key="item.id" :id="item.id">
-        <card :item="item"></card>
-      </div>
+      <v-container class="grey lighten-5">
+        <v-row class="d-flex flex-wrap" :align="align" no-gutters>
+          <v-col
+            class="v-col-xs-12 v-col-md-4"
+            v-for="item in data"
+            :key="item.id"
+            :id="item.id"
+          >
+            <card :item="item"></card>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-main>
   </v-app>
 </template>

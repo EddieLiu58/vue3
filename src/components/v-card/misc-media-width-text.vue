@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" max-width="400">
+  <v-card outlined tile class="pa-2">
     <v-img
       class="align-end text-white"
       height="200"
