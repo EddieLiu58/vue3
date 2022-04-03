@@ -1,6 +1,7 @@
 require("dotenv").config();
 module.exports = {
   publicPath: process.env.VUE_APP_ENV === "production" ? "./" : "/",
+
   devServer: {
     proxy: {
       "/api": {
@@ -12,11 +13,20 @@ module.exports = {
       },
     },
   },
+
   filenameHashing: false,
+
   configureWebpack: {
     devtool: "source-map",
   },
+
   css: {
     extract: true,
+  },
+
+  pluginOptions: {
+    vuetify: {
+      // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
+    },
   },
 };
